@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-inventory-table
+      author: max
+      changes:
+        - sqlFile:
+            path: scripts/data.sql
+            encoding: UTF-8
+            splitStatements: true
+            endDelimiter: ;

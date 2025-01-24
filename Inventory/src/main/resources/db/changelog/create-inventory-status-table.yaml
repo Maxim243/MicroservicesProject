@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-inventory-status-table
+      author: max
+      changes:
+        - createTable:
+            tableName: product_status
+            columns:
+              - column:
+                  name: uniq_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_status
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false

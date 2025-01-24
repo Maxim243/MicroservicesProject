@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-product-catalog-table
+      author: max
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: uniq_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: sku
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name_title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(500)
+              - column:
+                  name: list_price
+                  type: decimal(10,2)
+              - column:
+                  name: sale_price
+                  type: decimal(10,2)
+              - column:
+                  name: category
+                  type: varchar(100)
+              - column:
+                  name: category_tree
+                  type: varchar(255)
+              - column:
+                  name: average_product_rating
+                  type: varchar(10)
+              - column:
+                  name: product_url
+                  type: varchar(255)
+              - column:
+                  name: product_image_urls
+                  type: varchar(255)
+              - column:
+                  name: brand
+                  type: varchar(100)
+              - column:
+                  name: total_number_reviews
+                  type: int
+              - column:
+                  name: reviews
+                  type: varchar(255)

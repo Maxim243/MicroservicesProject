@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-to-catalog-table
+      author: max
+      changes:
+        - sqlFile:
+            path: scripts/data.sql
+            encoding: UTF-8
+            splitStatements: true
+            endDelimiter: ;
+
